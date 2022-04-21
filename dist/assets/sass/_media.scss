@@ -1,0 +1,21 @@
+@media (max-width: 574px) {
+    .form {
+        flex-direction: column;
+    }
+    
+    h1{
+	    font-size: 55px;
+    }
+    .task{
+        width: 200px;
+    }
+    .overlay__info{
+	    padding: 30px 10px 0 10px;
+    }
+    .overlay__info-text{
+	font-size: 17px;
+}
+    .overlay__info-btn{
+	    margin-top: 25px;
+    }   
+}

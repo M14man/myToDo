@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <h1 id="h1">Hi, it`s simple To Do web app</h1>
+            <button id="changeLanguageToUa">Ua</button>
+            <button id="changeLanguageToUs">Us</button>
+            <span class="info">i</span>
+            <p id="pMain">My first pet project</p>
+            <button class="showForm">let's start</button>
+            <form class="form" action="#">
+                <input name="text" type="text" placeholder="input your task">
+                <button class="btn">Add task</button>
+                <button class="clear">Clear All</button>
+            </form>
+            <div class="tasks"></div>
+            <div class="message">
+               There is nothing to submit, please write your task
+            </div>
+        </div>
+    </section>
+    <div class="overlay">
+        <p class="overlay__paragraph">You are sure you want to delete all tasks ?</p>
+        <div class="overlay__wrapper">
+            <div class="overlay__btnWrapper">
+                <button class="yes">Yes</button>
+                <button class="no">Noooooo</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay__yes">
+        <p class="overlay__yes__paragraph">All tasks are cleared</p>
+    </div>
+    <div class="overlay__noTasks">
+        <p class="overlay__noTasks__paragraph">There is no tasks yeat. So i`ts nothing to delete.</p>
+        <button class="btnMyBad">Ok, my bad</button>
+    </div>
+    <div class="overlay__info">
+        <p class="overlay__info-text">
+            The notes you make here will be saved after reloading the page and even after closing the browser. So you don't have to worry about something happening to your records. Unless you want to delete them yourself, you need to swipe the note to the left or click on the cross. There is also a 'Delete All' button that can delete all entries. But be careful removing them, they will not return. Also, this notebook can memorize the language you have chosen to use. So, I hope you enjoy this web application.
+        </p>
+        <button class="overlay__info-btn">ok</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
