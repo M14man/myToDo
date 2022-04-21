@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let state = {
     };
 
-    form('[name="text"]', '.btn', '.tasks', '.form');
+    form();
     language();
 
 });

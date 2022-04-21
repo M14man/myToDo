@@ -103,7 +103,7 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   let state = {};
-  Object(_modules_form__WEBPACK_IMPORTED_MODULE_0__["default"])('[name="text"]', '.btn', '.tasks', '.form');
+  Object(_modules_form__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_changeLanguage__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 
@@ -227,11 +227,11 @@ const language = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const form = (inputSelector, btnSelector, parrentSelector, formSelector) => {
-  const input = document.querySelector(inputSelector),
-        btn = document.querySelector(btnSelector),
-        parrent = document.querySelector(parrentSelector),
-        form = document.querySelector(formSelector),
+const form = () => {
+  const input = document.querySelector('[name="text"]'),
+        btn = document.querySelector('.btn'),
+        parrent = document.querySelector('.tasks'),
+        form = document.querySelector('.form'),
         magicBtn = document.querySelector('.showForm'),
         clearBtn = document.querySelector('.clear'),
         yesBtn = document.querySelector('.yes'),
@@ -247,18 +247,16 @@ const form = (inputSelector, btnSelector, parrentSelector, formSelector) => {
         infoOverlay = document.querySelector('.overlay__info'),
         infoText = document.querySelector('.overlay__info-text');
   let counter = 0;
-  let counterOfBtn = 0;
-
-  if (!localStorage.getItem(`language`)) {
-    const lang = localStorage.setItem(`language`, 0);
-  } // console.log(counterOfBtn);
+  let counterOfBtn = 0; // if (!localStorage.getItem(`language`)) {
+  //     const lang = localStorage.setItem(`language`, 0);
+  // }
+  // console.log(counterOfBtn);
   // console.log(counter);
   // console.log(closeBtn)
   // if (parrent.childNodes) {
   //     console.log('ok');
   //     console.log(parrent.childNodes);
   // }
-
 
   btnInfo.addEventListener('click', () => {
     infoOverlay.style.display = 'block';
@@ -282,16 +280,16 @@ const form = (inputSelector, btnSelector, parrentSelector, formSelector) => {
           closeBtn = document.createElement('div');
     counter++;
     task.classList.add('task', 'animate__animated', 'animate__bounceIn');
-    localStorage.setItem(`task${counter}`, input.value);
-    console.log(localStorage.getItem(`task${counter}`));
+    localStorage.setItem(`task${counter}`, input.value); // console.log(localStorage.getItem(`task${counter}`));
+
     task.textContent = localStorage.getItem(`task${counter}`);
     closeBtn.classList.add('close');
     closeBtn.textContent = 'X';
     task.append(closeBtn);
     parrent.prepend(task); // console.log('clicked');
 
-    input.value = '';
-    console.log(counter);
+    input.value = ''; // console.log(counter);
+
     localStorage.setItem(`counter`, `${counter}`);
   }
 
